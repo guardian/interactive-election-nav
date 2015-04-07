@@ -9,7 +9,7 @@ Add placeholder div's in your interactive ```<div id="election-nav-head"></div>`
 
 ##### Load the script and call the function
 Load the script by adding a script tag in the page
-```<script src="http://interactive.guim.co.uk/2015/04/election-nav/electionNav.js" type="text/javascript"></script>``` and call the function ```initElectionNav(pathName)``` where pathname is the path of the page url.
+```<script src="http://interactive.guim.co.uk/2015/04/election-nav/electionNav.js" type="text/javascript"></script>``` and call the function ```initElectionNav(interactiveId)``` where interactiveId is the id of the interactive that you want to highlight.
 
 Alternatively, you can load the script tag via javascript:
 
@@ -23,7 +23,7 @@ script.onreadystatechange = loadNav;
 script.onload = loadNav;
         
 function loadNav(){
-	initElectionNav('/global/ng-interactive/2015/mar/31/election-navigation-test')
+	initElectionNav('pollprojection')
 }
 
 head.appendChild(script);
