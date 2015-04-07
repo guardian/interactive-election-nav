@@ -4,23 +4,27 @@ var head = document.querySelector('head');
 var link = document.createElement('link');
     link.setAttribute('rel', 'stylesheet');
     link.setAttribute('type', 'text/css');
-    link.setAttribute('href', 'http://interactive.guim.co.uk/2015/04/election-nav/style.css');
-    
+    link.setAttribute('href', 'http://localhost:8080/style.css');
+    // link.setAttribute('href', 'http://interactive.guim.co.uk/2015/04/election-nav/style.css');
+
 head.appendChild(link);
 
 var links = {
-    "/politics/ng-interactive/2015/feb/27/guardian-poll-projection" : {
+    "pollprojection" : {
         headline:"Election 2015: The Guardian poll projection",
+        url:"http://theguardian.com/politics/ng-interactive/2015/feb/27/guardian-poll-projection",
         title: "Poll projection",
         img: "http://i.guim.co.uk/media/w-300/h--/q-95/5f52472633631108ef17992c6b58753c8dc4e2ef/0_0_4614_2770/2000.jpg"
     },
-    "/politics/live/2015/mar/30/election-2015-official-campaign-starts-as-parties-clash-over-eu-referendum-live" : {
+    "liveblog" : {
         headline: "Election live 2015",
+        url:"http://theguardian.com/politics/live/2015/mar/30/election-2015-official-campaign-starts-as-parties-clash-over-eu-referendum-live",
         title: "Live blog",
         img: "http://i.guim.co.uk/media/w-300/h--/q-95/5f52472633631108ef17992c6b58753c8dc4e2ef/0_0_4614_2770/2000.jpg"
     },
-    "/global/ng-interactive/2015/mar/31/election-navigation-test":{
+    "test":{
         headline: "Test page",
+        url: "http://localhost:9000",
         title: "Test",
         img:"http://i.guim.co.uk/media/w-300/h--/q-95/5f52472633631108ef17992c6b58753c8dc4e2ef/0_0_4614_2770/2000.jpg"
     }
@@ -39,10 +43,16 @@ function renderHead(){
     var innerContainer = document.createElement('div');
         innerContainer.setAttribute('class','electionNav-inner-container');
 
+    var headTitleContainer = document.createElement('div');
+        headTitleContainer.setAttribute('class','electionNav-head-title')
+        headTitleContainer.innerHTML = "<p>Election 2015</p>"
+    
+    innerContainer.appendChild(headTitleContainer);
+
     for (var key in links){
         var headItem = document.createElement('div');
         var link = document.createElement('a');
-            link.setAttribute('href','http://theguardian.com' + key);
+            link.setAttribute('href',links[key].url);
             link.setAttribute('title',links[key].headline);
             link.innerHTML = links[key].title;
 
@@ -83,9 +93,9 @@ function renderFooter(){
             linkImage.setAttribute('alt',links[key].title)
 
         var link = document.createElement('a');
-            link.setAttribute('href','http://theguardian.com' + key);
+            link.setAttribute('href', links[key].url);
             link.setAttribute('title',links[key].headline);
-            link.innerHTML = links[key].title + linkImage.outerHTML;
+            link.innerHTML = "<span>" + links[key].title + "</span>" + linkImage.outerHTML;
 
         if(key === currentPath){
             footerItem.setAttribute('class','electionNav-footer-item electionNav-footer-item-active')

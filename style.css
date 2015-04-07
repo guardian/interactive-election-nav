@@ -1,35 +1,71 @@
 .electionNav-head-container{
 	width:100%;
-	height:40px;
-	background:#ddd;
+	height:48px;
+	background:#eee;
+	font-family:'Guardian Egyptian Web',Georgia,serif;
 }
 .electionNav-head-container .electionNav-inner-container{
-	height:40px;
+	height:48px;
 }
 
 .electionNav-inner-container{
-	background:#eee;
+	background:#fff;
 	padding:0 10px;
 	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+}
+
+.electionNav-head-title{
+	font-weight:bold;
+	margin:0;
+	display:block;
+	float:left;
+	width:100px;
+	position: relative;
+	padding-right:40px;
+	margin-right:30px;
+}
+.electionNav-head-title p{
+	margin:0;
+	padding-top:16px;
+}
+
+.electionNav-head-title:after{
+	width:1px;
+	background:#333;
+	bottom:0;
+	top:16px;
+	display:block;
+	content:'';
+	right:0;
+	position: absolute;
 }
 
 .electionNav-head-item{
 	display:inline-block;
-	margin:8px 15px;
+	margin-right:40px;
+}
+
+.electionNav-head-item a{
+	text-decoration: none;
+	padding-top:16px;
+	display: inline-block;
+	color:#888;
+	font-family: "Guardian Text Sans Web", Arial;
+}
+.electionNav-head-item a:hover{
+	text-decoration: underline;
 }
 
 .electionNav-head-item.electionNav-head-item-active a{
 	color:#333;
 	font-weight:bold;
 	cursor:default;
+	border-top:2px solid #333;
+	padding-top:14px;
 }
 .electionNav-head-item.electionNav-head-item-active a:hover{
 	text-decoration: none;
-}
-
-.electionNav-head-item a{
-	color:#888;
-	font-family: "Guardian Text Sans Web", Arial;
 }
 
 
@@ -37,18 +73,54 @@
 
 .electionNav-footer-container{
 	width:100%;
-	background:#ddd;
+	background:#eee;
+}
+
+.electionNav-footer-title{
+	font-family:'Guardian Egyptian Web',Georgia,serif;
+	font-weight:bold;
+	border-top:1px solid #dcdcdc;
+	border-bottom:1px solid #dcdcdc;
+	font-size:16px;
+	padding:15px 0;
+	margin:0;
 }
 
 .electionNav-footer-item{
 	display: inline-block;
 	width:20%;
 	margin-right:20px;
-	margin:20px 20px 20px 0;
+	margin:-1px 20px 0 0;
+}
+.electionNav-footer-item a{
+	font-family:'Guardian Egyptian Web',Georgia,serif;
+	color:#888;
+	text-decoration: none;
+	display:inline-block;
 }
 
-.electionNav-footer-item-active{
+.electionNav-footer-item:hover span{
+	text-decoration: underline;
+}
+
+.electionNav-footer-item span{
+	padding-top:14px;
+	padding-bottom:12px;
+	display:inline-block;
+}
+
+.electionNav-footer-item.electionNav-footer-item-active a{
+	color:#333;
 	font-weight:bold;
+	cursor: default;
+}
+.electionNav-footer-item.electionNav-footer-item-active:hover span{
+	text-decoration: none;
+}
+
+
+.electionNav-footer-item.electionNav-footer-item-active span{
+	border-top:4px solid #333;
 }
 
 .electionNav-footer-item img{
