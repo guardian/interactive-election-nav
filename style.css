@@ -1,0 +1,87 @@
+.electionNav-head-container{
+	width:100%;
+	height:40px;
+	background:#ddd;
+}
+.electionNav-head-container .electionNav-inner-container{
+	height:40px;
+}
+
+.electionNav-inner-container{
+	background:#eee;
+	padding:0 10px;
+	box-sizing:border-box;
+}
+
+.electionNav-head-item{
+	display:inline-block;
+	margin:8px 15px;
+}
+
+.electionNav-head-item.electionNav-head-item-active a{
+	color:#333;
+	font-weight:bold;
+	cursor:default;
+}
+.electionNav-head-item.electionNav-head-item-active a:hover{
+	text-decoration: none;
+}
+
+.electionNav-head-item a{
+	color:#888;
+	font-family: "Guardian Text Sans Web", Arial;
+}
+
+
+/*sadgadfgiadfjgiuhadfiguhadifughadiufhgiadufhgaidfuhgaiuhfgiadufhgiuadfg*/
+
+.electionNav-footer-container{
+	width:100%;
+	background:#ddd;
+}
+
+.electionNav-footer-item{
+	display: inline-block;
+	width:20%;
+	margin-right:20px;
+	margin:20px 20px 20px 0;
+}
+
+.electionNav-footer-item-active{
+	font-weight:bold;
+}
+
+.electionNav-footer-item img{
+	width:100%;
+}
+
+@media(min-width:480px){
+	.electionNav-inner-container{
+		padding:0 14px;
+	}
+}
+
+@media(min-width:740px){
+	.electionNav-inner-container{
+		max-width:740px;
+		margin:0 auto;
+	}
+}
+
+@media(min-width:980px){
+	.electionNav-inner-container{
+		max-width:980px;
+	}
+}
+
+@media(min-width:1140px){
+	.electionNav-inner-container{
+		max-width:1140px;
+	}
+}
+
+@media(min-width:1300px){
+	.electionNav-inner-container{
+		max-width:1300px;
+	}
+}
