@@ -19,12 +19,6 @@ var script = document.createElement('script');
         
 script.setAttribute('src','http://interactive.guim.co.uk/2015/04/election-nav/electionNav.js');
 script.setAttribute('type','text/javascript');
-script.onreadystatechange = loadNav;
-script.onload = loadNav;
-        
-function loadNav(){
-	initElectionNav('pollprojection')
-}
 
 head.appendChild(script);
 ```

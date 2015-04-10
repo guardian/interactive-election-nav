@@ -4,34 +4,28 @@ var head = document.querySelector('head');
 var link = document.createElement('link');
     link.setAttribute('rel', 'stylesheet');
     link.setAttribute('type', 'text/css');
-    link.setAttribute('href', 'http://localhost:8080/style.css');
+    link.setAttribute('href', 'http://interactive.guim.co.uk/2015/04/election-nav/style.css');
     // link.setAttribute('href', 'http://interactive.guim.co.uk/2015/04/election-nav/style.css');
 
 head.appendChild(link);
 
 var links = {
-    "pollprojection" : {
+    "2247270" : {
         headline:"Election 2015: The Guardian poll projection",
         url:"http://theguardian.com/politics/ng-interactive/2015/feb/27/guardian-poll-projection",
         title: "Poll projection",
         img: "http://i.guim.co.uk/media/w-300/h--/q-95/5f52472633631108ef17992c6b58753c8dc4e2ef/0_0_4614_2770/2000.jpg"
     },
-    "liveblog" : {
-        headline: "Election live 2015",
-        url:"http://theguardian.com/politics/live/2015/mar/30/election-2015-official-campaign-starts-as-parties-clash-over-eu-referendum-live",
-        title: "Live blog",
+    "2272795" : {
+        headline: "Mapping the polls",
+        url:"http://gu.com/p/47ctg",
+        title: "Mapping the polls",
         img: "http://i.guim.co.uk/media/w-300/h--/q-95/5f52472633631108ef17992c6b58753c8dc4e2ef/0_0_4614_2770/2000.jpg"
-    },
-    "test":{
-        headline: "Test page",
-        url: "http://localhost:9000",
-        title: "Test",
-        img:"http://i.guim.co.uk/media/w-300/h--/q-95/5f52472633631108ef17992c6b58753c8dc4e2ef/0_0_4614_2770/2000.jpg"
     }
 }
 
-function initElectionNav(pathName){
-    currentPath = pathName;
+function initElectionNav(pageId){
+    currentPath = pageId;
     renderHead();
     renderFooter();
 }
@@ -113,3 +107,7 @@ function renderFooter(){
     console.log(footerPlaceholder,footerContainer);
     footerPlaceholder.innerHTML = footerContainer.outerHTML;
 }
+
+var pageId = window.guardian ? window.guardian.config.page.pageCode : undefined;
+
+initElectionNav(pageId);
