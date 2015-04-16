@@ -3,6 +3,7 @@
 	height:48px;
 	background:transparent;
 	font-family:'Guardian Egyptian Web','Egyptian Display', Georgia,serif;
+    display: none;
 }
 .electionNav-head-container .electionNav-inner-container{
 	height:48px;
@@ -102,7 +103,6 @@
 	margin:-1px 0 0 0;
 }
 .electionNav-footer-item a{
-	/*font-family:'Guardian Egyptian Web','Egyptian Display',Georgia,serif;*/
 	font-family: "Guardian Text Sans Web", "Agate Sans", Arial;
 	color:#888;
 	text-decoration: none;
@@ -153,9 +153,13 @@
 	}
 }
 
-@media(min-width:740px){
-	.electionNav-inner-container{
-		max-width:740px;
+@media(min-width:660px){
+    .electionNav-head-container{
+        display: block;
+    }
+
+    .electionNav-inner-container{
+		max-width:660px;
 		margin:0 auto;
 	}
 	.electionNav-head-title:after{
