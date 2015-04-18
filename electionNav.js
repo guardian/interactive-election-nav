@@ -14,14 +14,14 @@ var links = {
         headline:"Election 2015: The Guardian poll projection",
         url:"http://theguardian.com/politics/ng-interactive/2015/feb/27/guardian-poll-projection",
         title: "Poll projection",
-        img: "http://interactive.guim.co.uk/2015/mar/uk-cartogram/assets-1429168163376/imgs/proj_projection.png" //TODO: remove temp link
+        img: "http://interactive.guim.co.uk/2015/04/election-nav/imgs/proj_projection.png"
         //img: "http://i.guim.co.uk/media/w-300/h--/q-95/5f52472633631108ef17992c6b58753c8dc4e2ef/0_0_4614_2770/2000.jpg"
     },
     "2272795" : {
         headline: "Mapping the polls",
         url:"http://preview.gutools.co.uk/global/ng-interactive/2015/apr/14/mapping-the-polls",
         title: "Mapping the polls",
-        img: "http://interactive.guim.co.uk/2015/mar/uk-cartogram/assets-1429168163376/imgs/proj_cartogram.png" //TODO: remove temp link
+        img: "http://interactive.guim.co.uk/2015/04/election-nav/imgs/proj_cartogram.png"
         //img: "http://i.guim.co.uk/media/w-300/h--/q-95/5f52472633631108ef17992c6b58753c8dc4e2ef/0_0_4614_2770/2000.jpg"
     }
 };
