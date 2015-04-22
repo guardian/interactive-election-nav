@@ -14,17 +14,21 @@ head.appendChild(link);
 var links = {
     "2247270" : {
         headline:"Election 2015: The Guardian poll projection",
-        url:"http://theguardian.com/politics/ng-interactive/2015/feb/27/guardian-poll-projection",
+        url:"http://theguardian.com/politics/ng-interactive/2015/feb/27/guardian-poll-projection?src=nav",
         title: "Poll projection",
         img: "http://interactive.guim.co.uk/2015/04/election-nav/imgs/proj_projection.png"
-        //img: "http://i.guim.co.uk/media/w-300/h--/q-95/5f52472633631108ef17992c6b58753c8dc4e2ef/0_0_4614_2770/2000.jpg"
     },
     "2272795" : {
         headline: "Mapping the polls",
-        url:"http://www.theguardian.com/politics/ng-interactive/2015/apr/20/election-2015-constituency-map",
+        url:"http://www.theguardian.com/politics/ng-interactive/2015/apr/20/election-2015-constituency-map?src=nav",
         title: "Mapping the polls",
         img: "http://interactive.guim.co.uk/2015/04/election-nav/imgs/proj_cartogram.png"
-        //img: "http://i.guim.co.uk/media/w-300/h--/q-95/5f52472633631108ef17992c6b58753c8dc4e2ef/0_0_4614_2770/2000.jpg"
+    },
+    "2260612" : {
+        headline: "What are the parties offering you?",
+        url:"http://www.theguardian.com/politics/ng-interactive/2015/apr/22/election-2015-what-do-the-party-policies-offer-you?src=nav",
+        title: "Personal policy guide",
+        img: "http://interactive.guim.co.uk/2015/04/election-nav/imgs/proj_policy.png"
     }
 };
 
@@ -86,6 +90,11 @@ function renderFooter(){
     var innerContainer = document.createElement('div');
         innerContainer.setAttribute('class','electionNav-inner-container');
 
+    var linksContainer = document.createElement('div');
+        linksContainer.setAttribute('class','electionNav-links-container');
+
+    
+
     // Add footer title
     var footerTitle = createLink(
         'Election 2015',
@@ -93,6 +102,7 @@ function renderFooter(){
         'electionNav-footer-title' 
     );
     innerContainer.appendChild(footerTitle);
+    innerContainer.appendChild(linksContainer)
 
     // Add footer items
     for (var key in links){
@@ -115,7 +125,7 @@ function renderFooter(){
         }
         
         footerItem.appendChild(link);
-        innerContainer.appendChild(footerItem);
+        linksContainer.appendChild(footerItem);
     }
 
     footerContainer.appendChild(innerContainer);
