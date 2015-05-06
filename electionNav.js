@@ -17,13 +17,13 @@ var links = {
         url:"http://theguardian.com/politics/ng-interactive/2015/feb/27/guardian-poll-projection?src=nav",
         title: "Polls",
         img: "http://interactive.guim.co.uk/2015/04/election-nav/imgs/proj_projection.png"
-    },/*
+    },
     "2281718" : {
         headline: "Can you form a stable government?",
         url:"http://theguardian.com/politics/ng-interactive/2015/may/07/election-2015-interactive-coalition-builder",
         title: "Coalition Bulider",
         img: "http://interactive.guim.co.uk/2015/04/election-nav/imgs/proj_coalition.png"
-    },*/
+    },
     "2272795" : {
         headline: "Election 2015 interactive: Who is ahead in the polls where you live?",
         url:"http://www.theguardian.com/politics/ng-interactive/2015/apr/20/election-2015-constituency-map?src=nav",
