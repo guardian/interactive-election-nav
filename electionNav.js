@@ -21,7 +21,7 @@ var links = {
     "2281718" : {
         headline: "Can you form a stable government?",
         url:"http://theguardian.com/politics/ng-interactive/2015/may/07/election-2015-interactive-coalition-builder",
-        title: "Coalition Bulider",
+        title: "Coalition builder",
         img: "http://interactive.guim.co.uk/2015/04/election-nav/imgs/proj_coalition.png"
     },
     "2272795" : {
